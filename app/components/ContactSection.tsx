@@ -7,41 +7,31 @@ export default function ContactSection() {
 		<section className="py-20 px-4">
 			<div className="max-w-4xl mx-auto text-center">
 				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
-					<h2 className="text-3xl font-bold text-gray-900">Let&apos;s Build Something Amazing</h2>
-					<p className="text-gray-600 max-w-2xl mx-auto">
+					<h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600">
+						Let&apos;s Get in Touch!!
+					</h2>
+					{/* <p className="text-gray-600 max-w-2xl mx-auto">
 						Looking for a full-stack developer who can architect and implement complete solutions? Let&apos;s discuss your project.
-					</p>
+					</p> */}
 
-					{/* Location */}
+
+					{/* Email Buttons */}
 					<div className="flex items-center justify-center gap-2 text-gray-600">
-						<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="2"
-								d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-							/>
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+						<svg className="w-7 h-7 inline-block align-middle translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
 						</svg>
-						<span>San Francisco, CA</span>
+						<a href="mailto:gokulg232003@gmail.com" className="text-lg text-blue-600 hover:underline">
+    						gokulg232003@gmail.com
+  						</a>
 					</div>
 
-					{/* Contact Buttons */}
+					{/* Resume Button */}
 					<div className="flex flex-col sm:flex-row justify-center gap-4">
 						<a
-							href="mailto:david@example.com"
-							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
-						>
-							<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-							</svg>
-							Get in Touch
-						</a>
-						<a
-							href="/resume.pdf"
+							href="/Resume_Gokul_Gandhikumar.pdf"
 							target="_blank"
-							className="px-8 py-3 bg-gray-100 border border-gray-200 text-gray-900 rounded-lg font-medium hover:bg-gray-200 transition-colors inline-flex items-center justify-center gap-2"
+							className= "px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"//"px-8 py-3 bg-gray-100 border border-gray-200 text-gray-900 rounded-lg font-medium hover:bg-gray-200 transition-colors inline-flex items-center justify-center gap-2"
 						>
 							<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
 								<path
@@ -58,7 +48,7 @@ export default function ContactSection() {
 					{/* Social Links */}
 					<div className="flex justify-center gap-6">
 						<a
-							href="https://github.com"
+							href="https://github.com/gokulg02"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-gray-600 hover:text-gray-900 transition-colors p-2 hover:bg-gray-100 rounded-lg"
@@ -68,7 +58,7 @@ export default function ContactSection() {
 							</svg>
 						</a>
 						<a
-							href="https://linkedin.com"
+							href="https://www.linkedin.com/in/gokulg02/"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-gray-600 hover:text-gray-900 transition-colors p-2 hover:bg-gray-100 rounded-lg"
@@ -77,16 +67,20 @@ export default function ContactSection() {
 								<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
 							</svg>
 						</a>
-						<a
-							href="https://twitter.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-gray-600 hover:text-gray-900 transition-colors p-2 hover:bg-gray-100 rounded-lg"
-						>
-							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-							</svg>
-						</a>
+					</div>
+
+					{/*Location*/}
+					<div className="flex items-center justify-center gap-2 text-gray-600">
+						<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+							/>
+							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+						</svg>
+						<span>San Diego, CA</span>
 					</div>
 				</motion.div>
 			</div>

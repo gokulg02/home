@@ -16,23 +16,24 @@ export default function HeroSection() {
 				<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8 md:mb-12">
 					<div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
 						<h1 className="text-4xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600">
-							David Miller
+							Gokul Gandhikumar
 						</h1>
-						<h2 className="text-2xl md:text-4xl font-bold text-gray-900">Full Stack Developer</h2>
+						{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Full Stack Developer</h2> */}
 						<p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-							I craft end-to-end solutions with 8+ years of experience building scalable applications and leading development teams.
+							I am a graduate student at UC San Diego studying Machine Learning and Data Science. I have a passion for building scalable and
+							high-performance ML systems. I am currently looking for full-time opportunities in the field of Machine Learning and Data Science. Feel free to reach out!
 						</p>
-						<p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
+						{/* <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
 							Previously Senior Full Stack Developer at <span className="text-blue-600">Stripe</span> and Tech Lead at{' '}
 							<span className="text-purple-600">Vercel</span>
-						</p>
+						</p> */}
 					</div>
 					<div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-100 rounded-full text-blue-600 text-xs md:text-sm">TypeScript</span>
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-100 rounded-full text-purple-600 text-xs md:text-sm">React & Next.js</span>
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-teal-100 rounded-full text-teal-600 text-xs md:text-sm">Node.js</span>
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-100 rounded-full text-blue-600 text-xs md:text-sm">Python</span>
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-100 rounded-full text-purple-600 text-xs md:text-sm">AWS</span>
+						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-100 rounded-full text-blue-600 text-xs md:text-sm">Computer Vision</span>
+						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-100 rounded-full text-purple-600 text-xs md:text-sm">Reinforcement Learning</span>
+						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-teal-100 rounded-full text-teal-600 text-xs md:text-sm">Cloud Technologies</span>
+						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-100 rounded-full text-blue-600 text-xs md:text-sm">LLMs</span>
+						{/* <span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-100 rounded-full text-purple-600 text-xs md:text-sm"></span> */}
 					</div>
 				</motion.div>
 
@@ -53,19 +54,23 @@ export default function HeroSection() {
 								onMouseEnter={() => setSelectedStack('frontend')}
 								onMouseLeave={() => setSelectedStack(null)}
 							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-blue-600">Frontend Development</h3>
+								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-blue-600">Programming Languages</h3>
 								<ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-600">
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-										Modern React Architectures
+										Python
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-										Performance Optimization
+										SQL
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
-										Responsive & Interactive UIs
+										C/C++
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+										Matlab
 									</li>
 								</ul>
 							</div>
@@ -78,19 +83,43 @@ export default function HeroSection() {
 								onMouseEnter={() => setSelectedStack('backend')}
 								onMouseLeave={() => setSelectedStack(null)}
 							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-purple-600">Backend Development</h3>
+								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-purple-600">ML Libraries</h3>
 								<ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-600">
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-										API Design & Development
+										PyTorch
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-										Database Architecture
+										TensorFlow
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
-										Real-time Systems
+										NumPy
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										Pandas
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										Scikit-learn
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										OpenAI APIs
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										LangChain
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										OpenAI Gym
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										StableBaselines
 									</li>
 								</ul>
 							</div>
@@ -103,11 +132,27 @@ export default function HeroSection() {
 								onMouseEnter={() => setSelectedStack('devops')}
 								onMouseLeave={() => setSelectedStack(null)}
 							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-teal-600">DevOps & Cloud</h3>
+								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-teal-600">Tools</h3>
 								<ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-600">
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
-										AWS Infrastructure
+										Azure Cloud Infrastructure
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
+										chromaDB
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
+										Docker
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
+										Flask	
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
+										Streamlit
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
@@ -115,7 +160,7 @@ export default function HeroSection() {
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
-										Scalable Architecture
+										Git Version Control
 									</li>
 								</ul>
 							</div>
