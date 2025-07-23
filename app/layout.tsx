@@ -13,9 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: '[Your Name] - Full-Stack Developer',
+	title: 'Gokul Gandhikumar - Portfolio',
 	description:
-		'Welcome to my portfolio! I am a passionate full-stack developer who bridges the gap between frontend and backend development. Specializing in creating complete web solutions, from beautiful user interfaces to robust server architectures.',
+		'Welcome to my portfolio! I am passionate about building machine learning and data science applications. Explore my projects and expertise in creating innovative solutions.',
+	applicationName: 'Gokul Gandhikumar - Portfolio',
 	keywords: [
 		'Full-Stack Developer',
 		'Software Engineer',
@@ -31,16 +32,16 @@ export const metadata: Metadata = {
 		'DevOps',
 		'System Architecture',
 		'Web Development',
-		'[Your Name]',
+		'Gokul Gandhikumar',
 	],
-	authors: [{ name: '[Your Name]' }],
-	creator: '[Your Name]',
+	authors: [{ name: 'Gokul Gandhikumar' }],
+	creator: 'Gokul Gandhikumar',
 	openGraph: {
-		title: '[Your Name] - Full-Stack Developer Portfolio',
+		title: 'Gokul Gandhikumar - Full-Stack Developer Portfolio',
 		description:
 			'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
-		url: 'https://your-domain.com',
-		siteName: '[Your Name] - Portfolio',
+		url: 'https://gokulg.vercel.app',
+		siteName: 'Gokul Gandhikumar - Portfolio',
 		images: [
 			{
 				url: '/og-image.jpg',
@@ -51,14 +52,6 @@ export const metadata: Metadata = {
 		],
 		locale: 'en_US',
 		type: 'website',
-	},
-	twitter: {
-		card: 'summary_large_image',
-		title: '[Your Name] - Full-Stack Developer',
-		description:
-			'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
-		creator: '@yourusername',
-		images: ['/og-image.jpg'],
 	},
 	robots: {
 		index: true,

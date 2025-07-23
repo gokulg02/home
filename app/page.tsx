@@ -16,7 +16,7 @@ export default function FullStackPortfolio() {
 		<a href="/Resume_Gokul_Gandhikumar.pdf" className="text-gray-600 hover:text-blue-600">Resume</a>
       </nav>
 
-      <section id="hero"><HeroSection /></section>
+      <section id="hero" className="mt-16"><HeroSection /></section>
       <section id="education"><EducationSection /></section>
       {/* <section id="projects"><ProjectsSection /></section> */}
       <section id="contact"><ContactSection /></section>
