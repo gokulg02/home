@@ -4,260 +4,301 @@ import { motion } from 'framer-motion';
 
 export default function ProjectsSection() {
 	return (
-		<section className="py-20 px-4">
-			<div className="max-w-6xl mx-auto">
-				<motion.h2
-					initial={{ opacity: 0 }}
-					whileInView={{ opacity: 1 }}
-					viewport={{ once: true }}
-					className="text-3xl font-bold mb-16 text-center text-gray-900"
+		<section className="min-h-[60vh] relative overflow-hidden py-20 md:py-28 bg-gray-50">
+			<div className="absolute inset-0">
+				<div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+			</div>
+
+			<div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6">
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5 }}
 				>
-					Full Stack Projects
-				</motion.h2>
+					<h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600">
+						Projects
+					</h2>
+					<div className="space-y-10">
+						{/* SnapChef */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+							<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+								SnapChef: Recipe Suggestion RAG Bot 
+							</h3>
+							<p className="text-sm md:text-base text-gray-600 mb-3">
+								<span className="font-medium">Tech Stack:</span> LangChain, OpenAI API, ChromaDB, Flask, Azure, Docker, Streamlit
+							</p>
+							<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
 
-				<div className="space-y-16">
-					{/* E-commerce Platform */}
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						className="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg"
-					>
-						<div className="p-8">
-							<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-								<div className="space-y-6">
-									<div>
-										<h3 className="text-2xl font-bold mb-4 text-gray-900">Enterprise E-commerce Platform</h3>
-										<p className="text-gray-600">
-											A high-performance e-commerce solution handling 100K+ daily transactions with real-time inventory and ML-powered recommendations.
-										</p>
-									</div>
 
-									<div className="grid grid-cols-2 gap-6">
-										<div>
-											<h4 className="text-sm font-semibold text-blue-600 mb-3">Frontend Architecture</h4>
-											<ul className="space-y-2 text-sm text-gray-600">
-												<li>• Next.js Server Components</li>
-												<li>• Real-time Cart & Inventory</li>
-												<li>• Stripe Payment Integration</li>
-												<li>• PWA with Offline Support</li>
-											</ul>
-										</div>
-										<div>
-											<h4 className="text-sm font-semibold text-purple-600 mb-3">Backend Systems</h4>
-											<ul className="space-y-2 text-sm text-gray-600">
-												<li>• Node.js Microservices</li>
-												<li>• Redis Caching Layer</li>
-												<li>• Kafka Event Streaming</li>
-												<li>• Elasticsearch Product Search</li>
-											</ul>
-										</div>
-									</div>
+								<li>
+									Designed a RAG system to suggest recipes tailored to user preferences and available ingredients.
+								</li>
+								<li>
+									Built a vector database with ChromaDB for efficient recipe retrieval from an existing recipe dataset and deployed the service using Flask on Azure cloud.
+								</li>
+								<li>
+									Leveraged LangChain and OpenAI APIs to implement chain-of-thought prompting for generating personalized recipes based on users’ preferences, dietary restrictions, available ingredients, and desired serving size.
+								</li>
+							</ul>
 
-									<div className="space-y-3">
-										<h4 className="text-sm font-semibold text-teal-600">Key Achievements</h4>
-										<ul className="space-y-2 text-sm text-gray-600">
-											<li>• 99.99% Uptime with Blue-Green Deployment</li>
-											<li>• 300ms Average API Response Time</li>
-											<li>• 45% Reduction in Infrastructure Costs</li>
-										</ul>
-									</div>
-								</div>
+							<div className="flex justify-center mt-4 gap-4">
+							<a
+								href="https://github.com/gokulg02/SnapChef"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+								<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />	
+								</svg>
+								GitHub Repo
+							</a>
 
-								<div className="bg-gray-50 rounded-xl p-6">
-									<h4 className="text-sm font-semibold text-gray-600 mb-4">System Architecture</h4>
-									<div className="aspect-[4/3] bg-white rounded-lg p-4 shadow-inner">
-										{/* Add detailed system architecture diagram here */}
-										<svg className="w-full h-full" viewBox="0 0 400 300">
-											{/* Client Layer */}
-											<g>
-												<rect x="20" y="20" width="360" height="40" rx="4" className="fill-blue-100 stroke-blue-400" strokeWidth="1" />
-												<text x="200" y="45" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Next.js Frontend (SSR + Client Components)
-												</text>
-											</g>
+							<a
+								href="https://github.com/gokulg02/SnapChef/blob/main/Assets/Demo2x.gif"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+								<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								{/* <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /> */}
+								<path d="M10 8.64L15.27 12 10 15.36V8.64M8 5v14l11-7L8 5z" />
+								</svg>
+								Demo
+							</a>
+							</div>
 
-											{/* API Layer */}
-											<g>
-												<rect x="20" y="80" width="170" height="40" rx="4" className="fill-purple-100 stroke-purple-400" strokeWidth="1" />
-												<rect x="210" y="80" width="170" height="40" rx="4" className="fill-purple-100 stroke-purple-400" strokeWidth="1" />
-												<text x="105" y="105" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Product Service
-												</text>
-												<text x="295" y="105" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Order Service
-												</text>
-											</g>
+						</div>
 
-											{/* Cache Layer */}
-											<g>
-												<rect x="20" y="140" width="360" height="30" rx="4" className="fill-teal-100 stroke-teal-400" strokeWidth="1" />
-												<text x="200" y="160" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Redis Cache Layer
-												</text>
-											</g>
+						{/* GuidedFace */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+							GuidedFace: Face Image Generation based on Prompt and Facial Landmarks Image
+						</h3>
+						<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack:</span> PyTorch, ControlNet, StableDiffusion
+						</p>
+						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+							<li>
+							Retrained a text-to-image StableDiffusion model based on ControlNet architecture to generate realistic face images conditioned on both text prompts and facial landmark images.
+							</li>
+							<li>
+							Achieved 99% structural similarity with the conditioning input image and evaluation using FID and Inception Score demonstrated generation quality on par with baseline StableDiffusion.
+							</li>
+						</ul>
 
-											{/* Database Layer */}
-											<g>
-												<rect x="20" y="190" width="170" height="40" rx="4" className="fill-blue-100 stroke-blue-400" strokeWidth="1" />
-												<rect x="210" y="190" width="170" height="40" rx="4" className="fill-purple-100 stroke-purple-400" strokeWidth="1" />
-												<text x="105" y="215" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Product DB (PostgreSQL)
-												</text>
-												<text x="295" y="215" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Order DB (MongoDB)
-												</text>
-											</g>
+						<div className="flex justify-center mt-4">
+							<a
+							href="https://github.com/gokulg02/GuidedFace" 
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+							</svg>
+							GitHub Repo
+							</a>
+						</div>
+						</div>
 
-											{/* Search Layer */}
-											<g>
-												<rect x="20" y="250" width="360" height="30" rx="4" className="fill-teal-100 stroke-teal-400" strokeWidth="1" />
-												<text x="200" y="270" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Elasticsearch Product Search
-												</text>
-											</g>
+						{/* Motion Prediction */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+							Interaction-Aware Motion Prediction for Self-Driving 
+						</h3>
+						<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack:</span> PyTorch, Transformers, Autonomous Driving Simulation
+						</p>
+						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+							<li>
+							Developed an interaction-aware motion prediction model using transformers to predict other vehicles’ reactions to the autonomous vehicle’s planned actions and used this feedback to further refine the autonomous vehicle’s planned trajectory.
+							</li>
+							<li>
+							Proposed algorithm performed maneuvers like left turn, merging, and overtaking safely in 97% of the testing simulations.
+							</li>
+						</ul>
 
-											{/* Connection Lines */}
-											<g className="stroke-gray-400" strokeWidth="1">
-												<line x1="200" y1="60" x2="200" y2="80" />
-												<line x1="105" y1="120" x2="105" y2="140" />
-												<line x1="295" y1="120" x2="295" y2="140" />
-												<line x1="105" y1="170" x2="105" y2="190" />
-												<line x1="295" y1="170" x2="295" y2="190" />
-												<line x1="200" y1="230" x2="200" y2="250" />
-											</g>
-										</svg>
-									</div>
-								</div>
+						<div className="flex justify-center mt-4">
+							<a
+							href="https://github.com/gokulg02/Interaction-Aware-Motion-Prediction-for-Self-Driving" 
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+							</svg>
+							GitHub Repo
+							</a>
+						</div>
+						</div>
+
+						{/* Load balancing */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+							Load Balancing in 5G networks using Reinforcement Learning 
+						</h3>
+						<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack:</span> PyTorch
+						</p>
+						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+							<li>
+							Designed Q-learning & Deep Q-learning reinforcement learning algorithms for optimal user association of mobile devices with base stations in 5G mobile networks.
+							</li>
+							<li>
+							Developed a real-time mobile network simulator using Python from scratch, trained RL models and tested their performance.
+							</li>
+							<li>
+							Trained RL models increased network data rates by 175% while demonstrating robustness to network environment fluctuations and user mobility.
+							</li>
+							<li>
+							Work published in the Journal of Supercomputing.
+							</li>
+						</ul>
+
+							<div className="flex justify-center mt-4 gap-4">
+							<a
+								href="https://github.com/gokulg02/QL-and-DQL-based-load-balancing-in-5G-cellular-networks"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+								<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />	
+								</svg>
+								GitHub Repo
+							</a>
+
+							<a
+								href="https://github.com/gokulg02/QL-and-DQL-based-load-balancing-in-5G-cellular-networks/blob/main/Paper.pdf"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+								<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									fillRule="evenodd"
+									d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"
+									clipRule="evenodd"
+								/>
+								</svg>
+								Publication
+							</a>
 							</div>
 						</div>
-					</motion.div>
 
-					{/* Real-time Analytics Platform */}
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						className="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-lg"
-					>
-						<div className="p-8">
-							<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-								<div className="space-y-6">
-									<div>
-										<h3 className="text-2xl font-bold mb-4 text-gray-900">Real-time Analytics Platform</h3>
-										<p className="text-gray-600">
-											A scalable analytics platform processing 1M+ events per minute with real-time dashboards and ML-powered insights.
-										</p>
-									</div>
+						{/* Driver fatigue */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+							Driver Fatigue Detection using Computer Vision  
+						</h3>
+						<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack:</span> OpenCV, DLib, Flask, CSS, ThingSpeak Cloud
+						</p>
+						{/* <p className="text-sm md:text-base text-gray-500 mb-2 text-center">Apr 2025 – June 2025</p> */}
+						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+							<li>
+							Developed a real-time driver fatigue detection system using facial feature tracking and computer vision.
+							</li>
+							<li>
+							Built an interactive web dashboard to monitor and log fatigue instances on ThingSpeak cloud.
+							</li>
+							<li>	
+							Secured 2nd place (top 5%) in Caterpillar’s CODE-A-THON 2024 among 45+ teams.
+							</li>
+						</ul>
 
-									<div className="grid grid-cols-2 gap-6">
-										<div>
-											<h4 className="text-sm font-semibold text-blue-600 mb-3">Frontend Features</h4>
-											<ul className="space-y-2 text-sm text-gray-600">
-												<li>• Real-time Data Visualization</li>
-												<li>• Interactive Dashboards</li>
-												<li>• Custom Chart Components</li>
-												<li>• Data Export Tools</li>
-											</ul>
-										</div>
-										<div>
-											<h4 className="text-sm font-semibold text-purple-600 mb-3">Backend Pipeline</h4>
-											<ul className="space-y-2 text-sm text-gray-600">
-												<li>• Apache Kafka Streams</li>
-												<li>• ClickHouse Analytics DB</li>
-												<li>• Python Data Processing</li>
-												<li>• Redis Time Series</li>
-											</ul>
-										</div>
-									</div>
-
-									<div className="space-y-3">
-										<h4 className="text-sm font-semibold text-teal-600">Performance Metrics</h4>
-										<ul className="space-y-2 text-sm text-gray-600">
-											<li>• 1M+ Events/Minute Processing</li>
-											<li>• Sub-second Query Response</li>
-											<li>• 99.99% Data Accuracy</li>
-										</ul>
-									</div>
-								</div>
-
-								<div className="bg-gray-50 rounded-xl p-6">
-									<h4 className="text-sm font-semibold text-gray-600 mb-4">Data Flow Architecture</h4>
-									<div className="aspect-[4/3] bg-white rounded-lg p-4 shadow-inner">
-										<svg className="w-full h-full" viewBox="0 0 400 300">
-											{/* Data Sources */}
-											<g>
-												<rect x="20" y="20" width="110" height="30" rx="4" className="fill-blue-100 stroke-blue-400" strokeWidth="1" />
-												<rect x="145" y="20" width="110" height="30" rx="4" className="fill-blue-100 stroke-blue-400" strokeWidth="1" />
-												<rect x="270" y="20" width="110" height="30" rx="4" className="fill-blue-100 stroke-blue-400" strokeWidth="1" />
-												<text x="75" y="40" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Web Events
-												</text>
-												<text x="200" y="40" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Mobile Events
-												</text>
-												<text x="325" y="40" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													API Events
-												</text>
-											</g>
-
-											{/* Event Processing */}
-											<g>
-												<rect x="20" y="80" width="360" height="40" rx="4" className="fill-purple-100 stroke-purple-400" strokeWidth="1" />
-												<text x="200" y="105" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Kafka Event Streaming
-												</text>
-											</g>
-
-											{/* Processing Layer */}
-											<g>
-												<rect x="20" y="150" width="170" height="40" rx="4" className="fill-teal-100 stroke-teal-400" strokeWidth="1" />
-												<rect x="210" y="150" width="170" height="40" rx="4" className="fill-teal-100 stroke-teal-400" strokeWidth="1" />
-												<text x="105" y="175" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Stream Processing
-												</text>
-												<text x="295" y="175" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Batch Processing
-												</text>
-											</g>
-
-											{/* Storage Layer */}
-											<g>
-												<rect x="20" y="220" width="170" height="30" rx="4" className="fill-blue-100 stroke-blue-400" strokeWidth="1" />
-												<rect x="210" y="220" width="170" height="30" rx="4" className="fill-purple-100 stroke-purple-400" strokeWidth="1" />
-												<text x="105" y="240" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													ClickHouse
-												</text>
-												<text x="295" y="240" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													Redis Time Series
-												</text>
-											</g>
-
-											{/* API Layer */}
-											<g>
-												<rect x="20" y="270" width="360" height="30" rx="4" className="fill-teal-100 stroke-teal-400" strokeWidth="1" />
-												<text x="200" y="290" textAnchor="middle" className="fill-gray-600 text-[12px]">
-													GraphQL API Layer
-												</text>
-											</g>
-
-											{/* Connection Lines */}
-											<g className="stroke-gray-400" strokeWidth="1">
-												<line x1="75" y1="50" x2="75" y2="80" />
-												<line x1="200" y1="50" x2="200" y2="80" />
-												<line x1="325" y1="50" x2="325" y2="80" />
-												<line x1="200" y1="120" x2="200" y2="150" />
-												<line x1="105" y1="190" x2="105" y2="220" />
-												<line x1="295" y1="190" x2="295" y2="220" />
-												<line x1="200" y1="250" x2="200" y2="270" />
-											</g>
-										</svg>
-									</div>
-								</div>
-							</div>
+						<div className="flex justify-center mt-4">
+							<a
+							href="https://github.com/gokulg02/Driver_fatigue_detection" 
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+							</svg>
+							GitHub Repo
+							</a>
 						</div>
-					</motion.div>
-				</div>
+						</div>
+
+						{/* Drunk or sober */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+							Drunk or Sober Prediction from Accelerometer Data
+						</h3>
+						<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack:</span> Scikit-learn, Pandas, Numpy
+						</p>
+						{/* <p className="text-sm md:text-base text-gray-500 mb-2 text-center">Apr 2025 – June 2025</p> */}
+						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+							<li>
+							Developed a ML based method to classify alcohol intoxication levels by analyzing motion patterns of a person from smartphone accelerometer time-series data.
+							</li>
+							<li>
+							Achieved 83% prediction accuracy by training a random forest classifier to make prediction from time and frequency domain features extracted from accelerometer data.
+							</li>
+						</ul>
+
+						<div className="flex justify-center mt-4">
+							<a
+							href="https://github.com/gokulg02/Drunk-or-Sober-Prediction-from-Accelerometer-Data" 
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+							</svg>
+							GitHub Repo
+							</a>
+						</div>
+						</div>
+						{/* Watermarking */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+							Watermarking of Quantized Diffusion Models
+						</h3>
+						<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack:</span> PyTorch, HuggingFace, Diffusers, Flux Diffusion Model
+						</p>
+						{/* <p className="text-sm md:text-base text-gray-500 mb-2 text-center">Apr 2025 – June 2025</p> */}
+						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+							<li>
+							Developed a robust watermarking framework for quantized diffusion models to protect intellectual property and support secure deployment of image generation models on edge devices.
+							</li>
+							<li>
+							Implemented a workflow that embeds tamper-resistant ownership signatures in quantized Flux.1 text-to-image models, achieving strong resilience to adversarial attacks with minimal impact on model fidelity (≤2 FID increase).
+							</li>
+							<li>
+							Demonstrated through comprehensive testing that watermark removal attempts significantly degrade model quality, ensuring reliable ownership verification while maintaining high image generation quality.
+							</li>
+						</ul>
+
+						<div className="flex justify-center mt-4">
+							<a
+							href="https://drive.google.com/file/d/1r36YjGmTwmppqDP92Eb50hb4q1RXPLfo/view?usp=sharing" 
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									fillRule="evenodd"
+									d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"
+									clipRule="evenodd"
+								/>
+							</svg>
+							Documentation
+							</a>
+						</div>
+						</div>
+
+
+					</div>
+				</motion.div>
 			</div>
 		</section>
 	);

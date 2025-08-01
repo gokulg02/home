@@ -156,6 +156,10 @@ export default function HeroSection() {
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
+										RESTful APIs
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
 										CI/CD Pipelines
 									</li>
 									<li className="flex items-center gap-2">

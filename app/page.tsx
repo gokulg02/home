@@ -1,7 +1,7 @@
 'use client';
 
 import HeroSection from './components/HeroSection';
-// import ProjectsSection from './components/ProjectsSection';
+import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import EducationSection from './components/EducationSection';
 
@@ -11,14 +11,14 @@ export default function FullStackPortfolio() {
       <nav className="sticky top-0 z-50 bg-white shadow flex justify-center gap-6 p-4 text-sm md:text-base">
         <a href="#hero" className="text-gray-600 hover:text-blue-600">Home</a>
         <a href="#education" className="text-gray-600 hover:text-blue-600">Education</a>
-        {/* <a href="#projects" className="text-gray-600 hover:text-blue-600">Projects</a> */}
+        <a href="#projects" className="text-gray-600 hover:text-blue-600">Projects</a>
         <a href="#contact" className="text-gray-600 hover:text-blue-600">Contact</a>
 		<a href="/Resume_Gokul_Gandhikumar.pdf" className="text-gray-600 hover:text-blue-600">Resume</a>
       </nav>
-
+      
       <section id="hero" className="mt-16"><HeroSection /></section>
       <section id="education"><EducationSection /></section>
-      {/* <section id="projects"><ProjectsSection /></section> */}
+      <section id="projects"><ProjectsSection /></section>
       <section id="contact"><ContactSection /></section>
     </main>
   );
