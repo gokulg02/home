@@ -19,6 +19,45 @@ export default function ProjectsSection() {
 						Projects
 					</h2>
 					<div className="space-y-10">
+						{/* Data engineering */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+							Azure Cloud-Native Platform for ML based Intoxication Detection and Monitoring 
+						</h3>
+						<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack: </span> Azure ML Studio, Azure Data Factory, Azure Functions, SQL, React, Flask, Docker
+						</p>
+						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+							<li>
+							Architected a scalable solution on Azure cloud for real-time intoxication detection and monitoring by processing live accelerometer data from multiple IoT devices
+							</li>
+							<li>
+							Designed a ETL pipeline on Azure Data Factory to extract time-series lag features from dataset and trained a random forest classifier that predicts user intoxication with 83% accuracy using Azure ML studio.
+							</li>
+							<li>
+							Engineered a workflow that uses Azure IoT Hub to ingest data from IoT devices, Azure Functions to run the trained ML model for inference, and Azure SQL Database to store the results for further analysis.
+							</li>
+							<li>
+							Built and deployed a web monitoring dashboard with React and Flask on an Azure VM to track user intoxication levels.
+							</li>
+
+						</ul>
+
+						<div className="flex justify-center mt-4">
+							<a
+							href="https://github.com/gokulg02/Azure-Cloud-Based-Intoxication-Monitoring-with-IoT-and-ML/tree/main" 
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+							</svg>
+							GitHub Repo
+							</a>
+						</div>
+						</div>
+
 						{/* SnapChef */}
 						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
 							<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
@@ -224,38 +263,7 @@ export default function ProjectsSection() {
 						</div>
 						</div>
 
-						{/* Drunk or sober */}
-						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
-						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
-							Drunk or Sober Prediction from Accelerometer Data
-						</h3>
-						<p className="text-sm md:text-base text-gray-600 mb-3">
-							<span className="font-medium">Tech Stack:</span> Scikit-learn, Pandas, Numpy
-						</p>
-						{/* <p className="text-sm md:text-base text-gray-500 mb-2 text-center">Apr 2025 – June 2025</p> */}
-						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
-							<li>
-							Developed a ML based method to classify alcohol intoxication levels by analyzing motion patterns of a person from smartphone accelerometer time-series data.
-							</li>
-							<li>
-							Achieved 83% prediction accuracy by training a random forest classifier to make prediction from time and frequency domain features extracted from accelerometer data.
-							</li>
-						</ul>
-
-						<div className="flex justify-center mt-4">
-							<a
-							href="https://github.com/gokulg02/Drunk-or-Sober-Prediction-from-Accelerometer-Data" 
-							target="_blank"
-							rel="noopener noreferrer"
-							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
-							>
-							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-							</svg>
-							GitHub Repo
-							</a>
-						</div>
-						</div>
+						
 						{/* Watermarking */}
 						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
 						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
