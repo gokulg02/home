@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ProjectsSection() {
 	const DataEnggImages = ["/SOBER.png", "/sober_demo.gif"];
-	const RecipeImages = ["/SnapChefArch.png", "/SnapChefDemo.gif"];
+	// const RecipeImages = ["/SnapChefArch.png", "/SnapChefDemo.gif"];
 
 	return (
 		<section className="min-h-[60vh] relative overflow-hidden py-20 md:py-28 bg-gray-50">
