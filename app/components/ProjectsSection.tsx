@@ -1,54 +1,11 @@
 'use client';
-
-import { motion } from 'framer-motion';
-import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-function ProjectCarousel() {
-  const [index, setIndex] = useState(0);
-  const slides = ["/SOBER.png", "/sober_demo.gif"];
-
-  // Auto-cycle every 4s
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
-  const prevSlide = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
-
-  return (
-    <div className="relative flex justify-center items-center mb-6">
-      {/* Left Arrow */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-2 md:left-4 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow-md transition"
-      >
-        <ChevronLeft size={28} />
-      </button>
-
-      {/* Current Slide */}
-      <img
-        src={slides[index]}
-        alt="Azure Intoxication Monitoring"
-        className="rounded-xl shadow-md max-h-[400px] w-auto object-contain transition-all duration-700"
-      />
-
-      {/* Right Arrow */}
-      <button
-        onClick={nextSlide}
-        className="absolute right-2 md:right-4 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow-md transition"
-      >
-        <ChevronRight size={28} />
-      </button>
-    </div>
-  );
-}
-
+import Carousel from "./Carousel";
+import { motion } from "framer-motion";
 
 export default function ProjectsSection() {
+	const DataEnggImages = ["/SOBER.png", "/sober_demo.gif"];
+	const RecipeImages = ["/SnapChefArch.png", "/SnapChefDemo.gif"];
+
 	return (
 		<section className="min-h-[60vh] relative overflow-hidden py-20 md:py-28 bg-gray-50">
 			<div className="absolute inset-0">
@@ -88,16 +45,8 @@ export default function ProjectsSection() {
 							</li>
 
 						</ul>
-						<ProjectCarousel />
 
-						{/* <div className="flex justify-center mb-6">
-							<img
-								src="/SOBER.png"
-								alt="Intoxication Monitoring Dashboard"
-								className="rounded-xl shadow-md max-h-[500px] w-auto object-contain"
-							/>
-						</div>
- */}
+						<Carousel images={DataEnggImages} interval={8000}/>
 
 						<div className="flex justify-center mt-4">
 							<a
@@ -135,6 +84,14 @@ export default function ProjectsSection() {
 									Leveraged LangChain and OpenAI APIs to implement chain-of-thought prompting for generating personalized recipes based on users’ preferences, dietary restrictions, available ingredients, and desired serving size.
 								</li>
 							</ul>
+
+							<div className="flex justify-center mb-6">
+								<img
+									src="/SnapChefArch.png"
+									alt="SnapChef Project"
+									className="rounded-xl shadow-md max-h-[4500px] w-auto object-contain"
+								/>
+							</div>
 
 							<div className="flex justify-center mt-4 gap-4">
 							<a
@@ -182,6 +139,15 @@ export default function ProjectsSection() {
 							</li>
 						</ul>
 
+						<div className="flex justify-center mb-6">
+							<img
+								src="/GuidedFace.jpg"
+								alt="GuidedFace Project"
+								className="rounded-xl shadow-md max-h-[4500px] w-auto object-contain"
+							/>
+						</div>
+
+
 						<div className="flex justify-center mt-4">
 							<a
 							href="https://github.com/gokulg02/GuidedFace" 
@@ -213,6 +179,15 @@ export default function ProjectsSection() {
 							Proposed algorithm performed maneuvers like left turn, merging, and overtaking safely in 97% of the testing simulations.
 							</li>
 						</ul>
+
+						<div className="flex justify-center mb-6">
+							<img
+								src="/OvertakingDemo.gif"
+								alt="GuidedFace Project"
+								className="rounded-xl shadow-md max-h-[4500px] w-auto object-contain"
+							/>
+						</div>
+
 
 						<div className="flex justify-center mt-4">
 							<a
