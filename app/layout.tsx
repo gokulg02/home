@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -38,9 +39,9 @@ export const metadata: Metadata = {
 	authors: [{ name: 'Gokul Gandhikumar' }],
 	creator: 'Gokul Gandhikumar',
 	openGraph: {
-		title: 'Gokul Gandhikumar - Full-Stack Developer Portfolio',
+		title: 'Gokul Gandhikumar - ML Engineer Portfolio',
 		description:
-			'Passionate full-stack developer creating complete web solutions. Explore my projects and technical expertise across the entire development stack.',
+			'I am a graduate student at UC San Diego studying Machine Learning and Data Science. I have a passion for building scalable and high-performance ML systems. I am currently looking for full-time opportunities in the field of Machine Learning and Data Science. Feel free to reach out!',
 		url: 'https://gokulg.vercel.app',
 		siteName: 'Gokul Gandhikumar - Portfolio',
 		images: [
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
 				url: '/og-image.jpg',
 				width: 1200,
 				height: 630,
-				alt: '[Your Name] - Full-Stack Developer Portfolio',
+				alt: 'Gokul Gandhikumar - ML Engineer Portfolio',
 			},
 		],
 		locale: 'en_US',
@@ -74,7 +75,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children} <Analytics /> </body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children} <Analytics /> <SpeedInsights /></body>
 		</html>
 	);
 }

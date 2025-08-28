@@ -1,6 +1,52 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+function ProjectCarousel() {
+  const [index, setIndex] = useState(0);
+  const slides = ["/SOBER.png", "/sober_demo.gif"];
+
+  // Auto-cycle every 4s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  const prevSlide = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
+
+  return (
+    <div className="relative flex justify-center items-center mb-6">
+      {/* Left Arrow */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-2 md:left-4 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow-md transition"
+      >
+        <ChevronLeft size={28} />
+      </button>
+
+      {/* Current Slide */}
+      <img
+        src={slides[index]}
+        alt="Azure Intoxication Monitoring"
+        className="rounded-xl shadow-md max-h-[400px] w-auto object-contain transition-all duration-700"
+      />
+
+      {/* Right Arrow */}
+      <button
+        onClick={nextSlide}
+        className="absolute right-2 md:right-4 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow-md transition"
+      >
+        <ChevronRight size={28} />
+      </button>
+    </div>
+  );
+}
+
 
 export default function ProjectsSection() {
 	return (
@@ -42,6 +88,16 @@ export default function ProjectsSection() {
 							</li>
 
 						</ul>
+						<ProjectCarousel />
+
+						{/* <div className="flex justify-center mb-6">
+							<img
+								src="/SOBER.png"
+								alt="Intoxication Monitoring Dashboard"
+								className="rounded-xl shadow-md max-h-[500px] w-auto object-contain"
+							/>
+						</div>
+ */}
 
 						<div className="flex justify-center mt-4">
 							<a
