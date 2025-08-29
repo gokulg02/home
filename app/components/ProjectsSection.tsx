@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ProjectsSection() {
 	const DataEnggImages = ["/SOBER.png", "/sober_demo.gif"];
-	// const RecipeImages = ["/SnapChefArch.png", "/SnapChefDemo.gif"];
+	const WatermarkImages = ["/Watermark1.png", "/Watermark2.png"];
 
 	return (
 		<section className="min-h-[60vh] relative overflow-hidden py-20 md:py-28 bg-gray-50">
@@ -204,6 +204,49 @@ export default function ProjectsSection() {
 						</div>
 						</div>
 
+						{/* Watermarking */}
+						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
+						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
+							Watermarking of Quantized Diffusion Models
+						</h3>
+						<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack:</span> PyTorch, HuggingFace, Diffusers, Flux Diffusion Model
+						</p>
+						{/* <p className="text-sm md:text-base text-gray-500 mb-2 text-center">Apr 2025 – June 2025</p> */}
+						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+							<li>
+							Developed a robust watermarking framework for quantized diffusion models to protect intellectual property and support secure deployment of image generation models on edge devices.
+							</li>
+							<li>
+							Implemented a workflow that embeds tamper-resistant ownership signatures in quantized Flux.1 text-to-image models, achieving strong resilience to adversarial attacks with minimal impact on model fidelity (≤2 FID increase).
+							</li>
+							<li>
+							Demonstrated through comprehensive testing that watermark removal attempts significantly degrade model quality, ensuring reliable ownership verification while maintaining high image generation quality.
+							</li>
+						</ul>
+
+						<Carousel images={WatermarkImages}/>
+
+						<div className="flex justify-center mt-4">
+							<a
+							href="https://drive.google.com/file/d/1r36YjGmTwmppqDP92Eb50hb4q1RXPLfo/view?usp=sharing" 
+							target="_blank"
+							rel="noopener noreferrer"
+							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+							>
+							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+								<path
+									fillRule="evenodd"
+									d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"
+									clipRule="evenodd"
+								/>
+							</svg>
+							Documentation
+							</a>
+						</div>
+						</div>
+
+
 						{/* Load balancing */}
 						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
 						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
@@ -295,45 +338,6 @@ export default function ProjectsSection() {
 						</div>
 
 						
-						{/* Watermarking */}
-						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
-						<h3 className="text-2xl md:text-3xl font-semibold text-blue-700 text-center mb-3">
-							Watermarking of Quantized Diffusion Models
-						</h3>
-						<p className="text-sm md:text-base text-gray-600 mb-3">
-							<span className="font-medium">Tech Stack:</span> PyTorch, HuggingFace, Diffusers, Flux Diffusion Model
-						</p>
-						{/* <p className="text-sm md:text-base text-gray-500 mb-2 text-center">Apr 2025 – June 2025</p> */}
-						<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
-							<li>
-							Developed a robust watermarking framework for quantized diffusion models to protect intellectual property and support secure deployment of image generation models on edge devices.
-							</li>
-							<li>
-							Implemented a workflow that embeds tamper-resistant ownership signatures in quantized Flux.1 text-to-image models, achieving strong resilience to adversarial attacks with minimal impact on model fidelity (≤2 FID increase).
-							</li>
-							<li>
-							Demonstrated through comprehensive testing that watermark removal attempts significantly degrade model quality, ensuring reliable ownership verification while maintaining high image generation quality.
-							</li>
-						</ul>
-
-						<div className="flex justify-center mt-4">
-							<a
-							href="https://drive.google.com/file/d/1r36YjGmTwmppqDP92Eb50hb4q1RXPLfo/view?usp=sharing" 
-							target="_blank"
-							rel="noopener noreferrer"
-							className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
-							>
-							<svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-								<path
-									fillRule="evenodd"
-									d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"
-									clipRule="evenodd"
-								/>
-							</svg>
-							Documentation
-							</a>
-						</div>
-						</div>
 
 
 					</div>
