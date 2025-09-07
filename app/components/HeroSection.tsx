@@ -20,7 +20,7 @@ export default function HeroSection() {
 						</h1>
 						{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Full Stack Developer</h2> */}
 						<p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-							As a Master's student studying Data Science at UC San Diego, I have deep expertise in generative AI, reinforcement learning, and cloud-native machine learning systems. I have hands-on experience in fine-tuning GenAI models (both vision and language), building RAG chatbots with vector databases, and engineering scalable data pipelines on Azure and AWS cloud. 
+							{"As a Master's student studying Data Science at UC San Diego, I have deep expertise in generative AI, reinforcement learning, and cloud-native machine learning systems. I have hands-on experience in fine-tuning GenAI models (both vision and language), building RAG chatbots with vector databases, and engineering scalable data pipelines on Azure and AWS cloud."}
 						</p>
 						{/* <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
 							Previously Senior Full Stack Developer at <span className="text-blue-600">Stripe</span> and Tech Lead at{' '}
