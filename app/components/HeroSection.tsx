@@ -20,8 +20,7 @@ export default function HeroSection() {
 						</h1>
 						{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Full Stack Developer</h2> */}
 						<p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-							I am a graduate student at UC San Diego studying Machine Learning and Data Science. I have a passion for building scalable and
-							high-performance ML systems. I am currently looking for full-time opportunities in the field of Machine Learning and Data Science. Feel free to reach out!
+							As a Master's student studying Data Science at UC San Diego, I have deep expertise in generative AI, reinforcement learning, and cloud-native machine learning systems. I have hands-on experience in fine-tuning GenAI models (both vision and language), building RAG chatbots with vector databases, and engineering scalable data pipelines on Azure and AWS cloud. 
 						</p>
 						{/* <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
 							Previously Senior Full Stack Developer at <span className="text-blue-600">Stripe</span> and Tech Lead at{' '}
@@ -137,6 +136,10 @@ export default function HeroSection() {
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
 										Azure Cloud Infrastructure
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
+										AWS Cloud 
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
