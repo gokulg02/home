@@ -20,12 +20,11 @@ export default function HeroSection() {
 						</h1>
 						{/* <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Full Stack Developer</h2> */}
 						<p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-							{"As a Master's student studying Data Science at UC San Diego, I have deep expertise in generative AI, reinforcement learning, and cloud-native machine learning systems. I have hands-on experience in fine-tuning GenAI models (both vision and language), building RAG chatbots with vector databases, and engineering scalable data pipelines on Azure and AWS cloud."}
+							{"I am a Master's student studying Data Science at UC San Diego with deep expertise in generative AI, reinforcement learning, and cloud-native machine learning systems. I have hands-on experience in fine-tuning GenAI models (both vision and language), building RAG chatbots with vector databases, and engineering scalable ML & data pipelines on Azure & AWS cloud."}
 						</p>
-						{/* <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
-							Previously Senior Full Stack Developer at <span className="text-blue-600">Stripe</span> and Tech Lead at{' '}
-							<span className="text-purple-600">Vercel</span>
-						</p> */}
+						{/* <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+							{"I am currently looking for full-time opportunities in ML Engineering, Data Science and Software Engineering roles. Feel free to reach out!!"}
+						</p>  */}
 					</div>
 					<div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
 						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-100 rounded-full text-blue-600 text-xs md:text-sm">Computer Vision</span>
@@ -69,6 +68,10 @@ export default function HeroSection() {
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+										JavaScript
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
 										Matlab
 									</li>
 								</ul>
@@ -82,7 +85,7 @@ export default function HeroSection() {
 								onMouseEnter={() => setSelectedStack('backend')}
 								onMouseLeave={() => setSelectedStack(null)}
 							>
-								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-purple-600">ML Libraries</h3>
+								<h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-purple-600">Libraries</h3>
 								<ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-gray-600">
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
@@ -120,6 +123,18 @@ export default function HeroSection() {
 										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
 										StableBaselines
 									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										Flask	
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										FastAPI	
+									</li>
+									<li className="flex items-center gap-2">
+										<div className="w-1.5 h-1.5 bg-purple-500 rounded-full" />
+										React
+									</li>
 								</ul>
 							</div>
 
@@ -151,8 +166,8 @@ export default function HeroSection() {
 									</li>
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
-										Flask	
-									</li>
+										Kubernetes
+									</li>							
 									<li className="flex items-center gap-2">
 										<div className="w-1.5 h-1.5 bg-teal-500 rounded-full" />
 										Streamlit
