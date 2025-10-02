@@ -20,12 +20,27 @@ export default function WorkSection() {
 							<h3 className="text-xl md:text-2xl font-semibold text-blue-700">Machine Learning Engineering Intern, Aquamesh.ai</h3>
 							<p className="text-sm md:text-base text-gray-600 mb-2">San Diego, CA, USA</p>
 							<p className="text-sm md:text-base text-gray-500 mb-2">Aug 2025 - Present</p>
+							<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack: </span> AWS SageMaker, AWS Bedrock, AWS Lambda, AWS Amplify, React, openCV, JavaScript, Python
+							</p>
 							<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
+								<li>
+									Conducted 10+ interviews with potential customers to understand user requirements of AI component of product.
+								</li>
+								<li>
+									Built and trained models for time-series forecasting of water quality metrics with 22% MAPE score using AWS SageMaker.
+								</li>
+								<li>
+									Deployed forecasting models as API endpoints and integrated predictions into a React dashboard on AWS Amplify.
+								</li>
+								<li>
+									Designed an agentic AI system leveraging LLMs via AWS Bedrock to analyze water quality trends and deliver insights.
+								</li>
 								<li>
 									Developing computer vision algorithms to automatically detect obstructions on remote IoT spectroscopy sensor lenses.
 								</li>
 								<li>
-									Implementing an end-to-end cloud native pipeline on AWS that integrates data collection from edge device cameras with image processing APIs to proactively monitor sensor lens cleanliness.
+									Implementing an end-to-end cloud native pipeline on AWS that integrates data collection from edge device cameras with image processing APIs to proactively monitor sensor lens cleanliness and send alerts to users.
 								</li>
 							</ul>
 						</div>
@@ -34,7 +49,9 @@ export default function WorkSection() {
 							<h3 className="text-xl md:text-2xl font-semibold text-blue-700">Graduate Student Researcher, University of California San Diego</h3>
 							<p className="text-sm md:text-base text-gray-600 mb-2">San Diego, CA, USA</p>
 							<p className="text-sm md:text-base text-gray-500 mb-2">Feb 2025 - Present</p>
-							
+							<p className="text-sm md:text-base text-gray-600 mb-3">
+							<span className="font-medium">Tech Stack: </span> OpenAI Gym, StableBaselines3,  PyTorch, Python
+							</p>
 							<ul className="list-disc list-outside pl-6 text-justify text-sm md:text-base text-gray-700 space-y-1 mb-4">
 
 

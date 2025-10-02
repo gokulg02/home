@@ -19,9 +19,9 @@ export default function EducationSection() {
 						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
 							<h3 className="text-xl md:text-2xl font-semibold text-blue-700">University of California San Diego, CA, USA</h3>
 							<p className="text-sm md:text-base text-gray-600 mb-2">Master of Science, Machine Learning and Data Science</p>
-							<p className="text-sm md:text-base text-gray-500 mb-2">Sept 2024 - Dec 2025</p>
+							<p className="text-sm md:text-base text-gray-500 mb-2">Sept 2024 - March 2026</p>
 							<p className="text-sm md:text-base text-gray-700">
-								<strong>Coursework:</strong> Probability & Statistics, Software Engineering Principles, Statistical Learning, Optimization of Deep Learning Algorithms, Machine Learning for Physical Applications, Data Management for Analytics, Generative AI
+								<strong>Coursework:</strong> Probability & Statistics, Software Engineering Principles, Statistical Learning, Optimization of Deep Learning Algorithms, Machine Learning for Physical Applications, Data Management for Analytics, Generative AI, LLMs for biomedicine, Recommender Systems and Web Mining
 							</p>
 						</div>
 
