@@ -17,7 +17,7 @@ export default function WorkSection() {
 					<div className="space-y-10">
 						{/* UCSD */}
 						<div className="bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200 p-6 md:p-8 shadow-lg">
-							<h3 className="text-xl md:text-2xl font-semibold text-blue-700">Machine Learning Engineering Intern, Aquamesh.ai</h3>
+							<h3 className="text-xl md:text-2xl font-semibold text-blue-700">Machine Learning Software Engineer, AquaMesh.AI</h3>
 							<p className="text-sm md:text-base text-gray-600 mb-2">San Diego, CA, USA</p>
 							<p className="text-sm md:text-base text-gray-500 mb-2">Aug 2025 - Present</p>
 							<p className="text-sm md:text-base text-gray-600 mb-3">

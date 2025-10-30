@@ -19,9 +19,9 @@ export default function FullStackPortfolio() {
       </nav>
       
       <section id="hero" className="mt-16"><HeroSection /></section>
-      <section id="education"><EducationSection /></section>
       <section id="work"><WorkSection /></section>
       <section id="projects"><ProjectsSection /></section>
+      <section id="education"><EducationSection /></section>
       <section id="contact"><ContactSection /></section>
     </main>
   );
