@@ -5,6 +5,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import EducationSection from './components/EducationSection';
 import WorkSection from './components/WorkSection';
+import CodingProfile from './components/CodingProfile';
 
 export default function FullStackPortfolio() {
   return (
@@ -14,6 +15,7 @@ export default function FullStackPortfolio() {
         <a href="#education" className="text-gray-600 hover:text-blue-600">Education</a>
         <a href="#work" className="text-gray-600 hover:text-blue-600">Work Experience</a>
         <a href="#projects" className="text-gray-600 hover:text-blue-600">Projects</a>
+        <a href="#coding-profile" className="text-gray-600 hover:text-blue-600">Coding Stats</a>
         <a href="#contact" className="text-gray-600 hover:text-blue-600">Contact</a>
 		<a href="/Resume_Gokul_Gandhikumar.pdf" className="text-gray-600 hover:text-blue-600">Resume</a>
       </nav>
@@ -22,6 +24,7 @@ export default function FullStackPortfolio() {
       <section id="work"><WorkSection /></section>
       <section id="projects"><ProjectsSection /></section>
       <section id="education"><EducationSection /></section>
+      <section id="coding-profile"><CodingProfile /></section>
       <section id="contact"><ContactSection /></section>
     </main>
   );
